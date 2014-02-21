@@ -7,6 +7,9 @@ class Student < ActiveRecord::Base
     def self.teachers
         where(title: 'Teacher')
         end 
+    def self.full_name
+        pluck(:fulle_name)
+        end
     
     def combined_info
         "name: #{full_name} \n" +
